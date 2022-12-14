@@ -7,8 +7,9 @@
     <th>Launch Date</th>
   </tr>
   <tr class="data-row" *ngFor="let sats of satellites">
+    <!-- used the object data from app.component.ts to access properties of satellites array with dot notation -->
     <td>{{ sats.name }}</td>
-    <td>{{ sats.type }}</td>
+    <td [class.warning]="sats.isSpaceDebris()">{{ sats.type }}</td>
     <td>{{ sats.operational }}</td>
     <td>{{ sats.orbitType }}</td>
     <td>{{ sats.operational }}</td>
