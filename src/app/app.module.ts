@@ -7,9 +7,7 @@ import { OrbitCountsComponent } from "./orbit-counts/orbit-counts.component";
 
 @NgModule({
   declarations: [AppComponent, OrbitListComponent, OrbitCountsComponent],
-  imports: [
-    // BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
 })

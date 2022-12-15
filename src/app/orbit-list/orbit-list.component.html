@@ -6,7 +6,11 @@
     <th>Orbit Type</th>
     <th>Launch Date</th>
   </tr>
-  <tr class="data-row" *ngFor="let sats of satellites">
+  <tr
+    class="data-row"
+    *ngFor="let sats of satellites; index as i"
+    [class.evenRow]="i % 2 == 0"
+  >
     <!-- used the object data from app.component.ts to access properties of satellites array with dot notation -->
     <td>{{ sats.name }}</td>
     <td [class.warning]="sats.isSpaceDebris()">{{ sats.type }}</td>
