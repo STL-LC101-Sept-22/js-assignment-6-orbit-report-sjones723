@@ -2,11 +2,9 @@
 <div class="counts">
   <div>
     Total:
-    <span class="counts-total" *ngIf="satellites.length; else elseBlock">{{
-      satellites.length
-    }}</span>
+    <span class="counts-total">{{ satellites.length }}</span>
   </div>
 </div>
 
 <!-- TODO 4: add logic to count number of satellites displayed -->
-<ng-template #elseBlock><span>0</span></ng-template>
+<!-- *ngIf="satellites.length; else elseBlock" <ng-template #elseBlock><span>0</span></ng-template> -->
